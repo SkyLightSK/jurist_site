@@ -10,7 +10,7 @@ imagemin = require('gulp-imagemin'),
 htmlmin = require('gulp-htmlmin');
 
 gulp.task('sass', function() {
-	return gulp.src('app/scss/*.scss')
+	return gulp.src(['app/scss/style.scss', 'app/scss/libs.min.scss'])
 	.pipe(sass())
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
@@ -18,7 +18,7 @@ gulp.task('sass', function() {
 
 gulp.task('script', function() {
 	return gulp.src([
-		// js libs
+		 'app/libs/jquery/dist/jquery.min.js'
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
@@ -29,8 +29,7 @@ gulp.task('css', ['sass'], function() {
 	return gulp.src('app/css/*.css')
 	.pipe(autoprefixer())
 	.pipe(cssnano())
-	.pipe(gulp.dest('app/css'))
-	.pipe(browserSync.reload({stream: true}));
+	.pipe(gulp.dest('app/css'));
 });
 
 gulp.task('browser', function() {
