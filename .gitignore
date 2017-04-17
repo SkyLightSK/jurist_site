@@ -2,3 +2,7 @@
 /dist
 /app/js/libs.min.js
 /app/css/*
+/firefox_root
+/*.extra
+/*.log
+/*.xpi
