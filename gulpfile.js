@@ -25,13 +25,6 @@ gulp.task('script', function() {
 	.pipe(gulp.dest('app/js'));
 });
 
-gulp.task('css', ['sass'], function() {
-	return gulp.src('app/css/*.css')
-	.pipe(autoprefixer())
-	.pipe(cssnano())
-	.pipe(gulp.dest('app/css'));
-});
-
 gulp.task('browser', function() {
 	browserSync({
 		server: {
@@ -51,8 +44,10 @@ gulp.task('clean', function() {
 	return del.sync('dist')
 })
 
-gulp.task('build', ['clean', 'css', 'script'], function() {
+gulp.task('build', ['clean', 'sass', 'script'], function() {
 	var buildCss = gulp.src('app/css/*.css')
+	.pipe(autoprefixer())
+	.pipe(cssnano())
 	.pipe(gulp.dest('dist/css'));
 
 	var buildFonts = gulp.src('app/fonts/**/*')

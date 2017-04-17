@@ -1,1 +1,45 @@
-@import 'nikita.scss', 'alex.scss';
+@font-face {
+	font-family: HelveticaNeue;
+	src: url('../fonts/HelveticaNeue/HelveticaNeueCyr-Medium.otf');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: HelveticaNeue;
+	src: url('../fonts/HelveticaNeue/HelveticaNeueCyr-Light.otf');
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: HelveticaNeue;
+	src: url('../fonts/HelveticaNeue/HelveticaNeueCyr-Bold.otf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: HelveticaNeue;
+	src: url('../fonts/HelveticaNeue/HelveticaNeueCyr-Thin.otf');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: HelveticaNeue;
+	src: url('../fonts/HelveticaNeue/HelveticaNeueCyr-Roman.otf');
+	font-weight: 400;
+}
+
+$background: #e8e8e9;
+$fontColorBlack: #343538;
+$redColor: #DF384A;
+$fontColorLightBlack: #adb3bc;
+
+body {
+	background: $background;
+	font-family: HelveticaNeue, sans-serif;
+	font-weight: 500;
+	color: $fontColorBlack;
+	font-size: 14px;
+}
+
+@import "mainPage", 
+"loader";

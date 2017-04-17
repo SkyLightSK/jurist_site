@@ -1,0 +1,28 @@
+@keyframes spin {
+	from { transform: rotate(0deg) }
+	to { transform: rotate(360deg) }
+}
+
+#loader {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $background;
+	&:after {
+		content: '';
+		position: absolute;
+		display: block;
+		top: calc(50% - 65px);
+		left: calc(50% - 65px);
+		border-radius: 50%;
+		height: 100px;
+		width: 100px;
+		border: solid 15px transparent;
+		border-bottom-color: $redColor;
+		border-top-color: $fontColorBlack;
+		animation: spin 2s linear infinite
+	}
+}

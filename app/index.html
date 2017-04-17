@@ -7,24 +7,34 @@
   	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted>
-  <source src="movies/webm.webm" type="video/webm">
-  </video>
+	<div id="loader"></div>
+	<video id="bgvid" playsinline autoplay muted>
+		<source src="movies/webm.webm" type="video/webm">
+	</video>
 	<div class="main-page-container">
 		<header>
 			<div class="nav-wrapper">
-				<div class="menu-list nav-left">Главная          Услуги          Блог          Признания          Наш опыт          Контакты</div>
-				<div class="menu-list nav-right">RU     ENG</div>
+				<ul class="menu-list nav-left">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Блог</a></li>
+					<li><a href="#">Признания</a></li>
+					<li><a href="#">Наш опыт</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+				<ul class="menu-list nav-right">
+					<li><a class="active" href="#">RU</a></li>
+					<li><a href="#">ENG</a></li>
+				</ul>
 			</div>
 		</header>
 		<footer>
 			<div class="nav-wrapper">
-				<div class="menu-list nav-left">Лицензионное соглашение</div>
-				<div class="menu-list nav-right">Договор оферты</div>
+				<div class="menu-list nav-left"><a href="#">Лицензионное соглашение</a></div>
+				<div class="menu-list nav-right"><a href="#">Договор оферты</a></div>
 			</div>
 		</footer>
 	</div>
-
 <script src="js/libs.min.js"></script>
 <script src="js/script.js"></script>
 </body>
