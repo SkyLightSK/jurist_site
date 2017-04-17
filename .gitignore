@@ -1,0 +1,4 @@
+/node_modules
+/dist
+/app/js/libs.min.js
+/app/css/*
